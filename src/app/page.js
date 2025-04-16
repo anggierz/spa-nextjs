@@ -28,14 +28,17 @@ export default async function Home() {
         <p>Find trending movies below. Click on a movie to see the details:</p>
         <div className="container">
           {movies.results.map((movie) => (
-            <div className={styles.card} key={movie.id}>
-              <Link href={`/movie/${movie.id}`}>
+            <Link
+              href={`/movie/${movie.id}`}
+              key={movie.id}
+              className="nav-link"
+            >
+              <div className="movie" key={movie.id}>
                 <Image
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt={movie.title}
-                  width={320}
-                  height={500}
-                  className={styles.image}
+                  width={247}
+                  height={370}
                 />
                 <h2>{movie.title}</h2>
                 <p>
@@ -46,8 +49,8 @@ export default async function Home() {
                 <p>
                   Release date: <strong> {movie.release_date}</strong>
                 </p>
-              </Link>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
