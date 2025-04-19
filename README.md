@@ -3,7 +3,7 @@
 Este proyecto es una aplicación SPA (Single Page Application) desarrollada en **React** y **Next.js** con App Router para la navegación. La aplicación permite a los usuarios explorar películas en tendencia, ver detalles individuales y navegar entre páginas sin recargar el navegador.
 
 🔗 **Versión SSR desplegada en Vercel:**  
-👉 [https://spa-nextjs-wheat.vercel.app/](https://spa-nextjs-wheat.vercel.app/)
+👉 [https://spa-react-router.vercel.app/](https://spa-react-router.vercel.app/)
 
 
 ## 📌 Descripción de la aplicación
