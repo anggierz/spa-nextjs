@@ -70,7 +70,8 @@ spa-nextjs/
 │   │   ├── search/page.js  # Página de búsqueda de películas (hecha con use client para evitar recargar la página)
 │   │   └── movie/[movieId]/     # Ruta dinámica para detalle de películas
 │   │       └── page.js
-│   └── components/         # Componentes reutilizables (Header)
+│   ├── components/         # Componentes reutilizables (Header)
+│   └── globals.css         # Estilos CSS de la aplicación
 ├── .env.example            # Variables de entorno de ejemplo
 ├── .gitignore              # Archivos ignorados por Git
 ├── README.md               # Documentación del proyecto
