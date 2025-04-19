@@ -12,20 +12,8 @@ export default function Search() {
 
   async function fetchMovieByTitle(title) {
     try {
-      const options = {
-        method: "GET",
-        headers: {
-          accept: "application/json",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_TOKEN}`,
-        },
-      };
-
-      const response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?query=${title}&include_adult=false&language=en-US&page=1`,
-        options
-      );
+      const response = await fetch(`/api/search?query=${title}`);
       const data = await response.json();
-      debugger;
       setMovies(data.results);
     } catch (error) {
       console.error("Error fetching movie: ", error);
