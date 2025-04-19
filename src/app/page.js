@@ -8,7 +8,7 @@ export default async function Home() {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${process.env.TMDB_TOKEN}`,
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_TOKEN}`,
     },
   };
 
@@ -47,7 +47,7 @@ export default async function Home() {
                     : movie.overview}
                 </p>
                 <p>
-                  Release date: <strong> {movie.release_date}</strong>
+                  Release date: <strong>{movie.release_date}</strong>
                 </p>
               </div>
             </Link>
