@@ -24,7 +24,7 @@ Esta práctica forma parte de la asignatura **Desarrollo Front con Frameworks I*
 - Rutas:
   - `app/page.js` → Inicio
   - `app/movie/[movieId]/page.js` → Detalle de película
-  - `app/search/page.js` → Búsqueda (con SSR real por parámetro `?q=`)
+  - `app/search/page.js` → Búsqueda de películas
 
 ## 🚀 Cómo ejecutar el proyecto localmente
 
@@ -64,11 +64,13 @@ spa-nextjs/
 ├── public/                 # Archivos estáticos
 ├── src/
 │   ├── app/                # Sistema de rutas con App Router
+│   │   ├── api/search/         # API interna para la búsqueda de peliculas en Search, para no exponer el token
+│   │   │    └── route.js
 │   │   ├── page.js         # Página de inicio con películas en tendencia
-│   │   ├── search/page.js  # Página de búsqueda de películas
+│   │   ├── search/page.js  # Página de búsqueda de películas (hecha con use client para evitar recargar la página)
 │   │   └── movie/[movieId]/     # Ruta dinámica para detalle de películas
 │   │       └── page.js
-│   └── components/         # Componentes reutilizables
+│   └── components/         # Componentes reutilizables (Header)
 ├── .env.example            # Variables de entorno de ejemplo
 ├── .gitignore              # Archivos ignorados por Git
 ├── README.md               # Documentación del proyecto
